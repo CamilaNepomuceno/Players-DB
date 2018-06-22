@@ -1,0 +1,42 @@
+﻿@model Players18.Models.Rating
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<h4>Player</h4>
+<hr/>
+<div class="row">
+    <div class="col-lg-5">
+        <dl class="dl-horizontal">
+
+            <dt>@Html.DisplayNameFor(p => p.Name)</dt>
+            <dd>@Html.DisplayFor(p => p.Name)</dd>
+            <dt>@Html.DisplayNameFor(p => p.Age)</dt>
+            <dd>@Html.DisplayFor(p => p.Age)</dd>
+            <dt>@Html.DisplayNameFor(p => p.Country)</dt>
+            <dd>@Html.DisplayFor(p => p.Country)</dd>
+            <dt>@Html.DisplayNameFor(p => p.Position)</dt>
+            <dd>@Html.DisplayFor(p => p.Position)</dd>
+            <dt>@Html.DisplayNameFor(p => p.CurrentTeam)</dt>
+            <dd>@Html.DisplayFor(p => p.CurrentTeam)</dd>
+            <dt>@Html.DisplayNameFor(p => p.ImageUrl)</dt>
+            <dd>@Html.DisplayFor(p => p.ImageUrl)
+
+        </dl>
+        
+    </div>
+
+    <div class="col-lg-6">
+        <iframe width="680" height="390" src="@Model.VideoUrl" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+</div>
+<p>
+ 
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-default" }) |
+    @Html.ActionLink("Edit Player", "Edit", new { id = Model.Id}, new { @class = "btn btn-default" }) |
+    @Html.ActionLink("Delete Player", "Delete", new { id = Model.Id }, new { @class = "btn btn-default" })
+</p>
+

@@ -1,0 +1,111 @@
+﻿body {
+    background: url(Blue.jpg);
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+
+
+
+/* Set padding to keep content from hitting the edges */
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    color: white;
+}
+
+
+.dl-horizontal dt {
+    font-size: 1.3em;
+    white-space: normal;
+}
+
+
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.main {
+    max-width: 950px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 4.5em;
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    font-size: 3em;
+    color: white;
+    text-align: center;
+}
+
+.labelText {
+    color: white;
+}
+
+.wrapper {
+    margin: auto;
+    max-width: 1050px;
+}
+
+.headingWrapper {
+    margin: auto;
+    max-width: 1050px;
+}
+
+.views {
+    min-height: 100%;
+    color: white;
+}
+
+.links {
+    color: white;
+}
+
+    .links:hover {
+        color: white;
+    }
+
+.indexLinks a {
+    color: white;
+    text-decoration: underline;
+}
+
+.rule {
+    margin-left: -2%;
+}
+
+footer {
+    display: inline-block;
+}
+
+table {
+    color: white;
+    font-size: 1.2em;
+}
+
+.playerImg {
+    border-color: white;
+    border: 3px solid;
+}
+
+.linkName a {
+    color: white;
+    text-decoration: none;
+}
+
+#playerCountry {
+    color: black;
+}

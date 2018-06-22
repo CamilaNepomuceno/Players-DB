@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Players18.Models.Rating>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h1>Who is the best? Fifa 2018</h1>
+
+
+@using (Html.BeginForm())
+
+{
+    <p>
+        <span class="labelText">Country:</span> @Html.DropDownList("playerCountry", "All")
+        <span class="labelText">Name:</span> @Html.TextBox("SearchString")
+      
+        <input type="submit" value="Filter" class="btn btn-default" />
+
+        @*link for creating a new record*@
+
+        @Html.ActionLink("Add new player", "Create", null, new { @class = "btn btn-default" })
+    </p>
+}
+
+
+<table class="table">
+    @*column headings for the table*@
+
+    <tr>
+        <th>
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Position)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CurrentTeam)
+        </th>
+        
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                @if (item.ImageUrl != null)
+                {
+                    <img class="playerImg" src="@Url.Content(item.ImageUrl)" height="100" />
+                }
+                else
+                {
+                    <img class="playerImg" src="@Url.Content("~/Content/no-photo.jpg")" height="100" />
+                }
+            </td>
+            <td class="linkName">@Html.ActionLink(item.Name, "Details", new { id = item.Id })</td>
+
+            <td>@Html.DisplayFor(p => item.Age)</td>
+            <td>@Html.DisplayFor(p => item.Country)</td>
+            <td>@Html.DisplayFor(p => item.Position)</td>
+            <td>@Html.DisplayFor(p => item.CurrentTeam)</td>
+            
+        </tr>
+    }
+</table>
