@@ -23,8 +23,16 @@
             <dt>@Html.DisplayNameFor(p => p.CurrentTeam)</dt>
             <dd>@Html.DisplayFor(p => p.CurrentTeam)</dd>
             <dt>@Html.DisplayNameFor(p => p.ImageUrl)</dt>
-            <dd>@Html.DisplayFor(p => p.ImageUrl)
+            <dd> @if (Model.ImageUrl != null)
+                {
+                    <img class="playerImg" src="@Url.Content(Model.ImageUrl)" height="100" />
+                }
+                else
+                {
+                    <img class="playerImg" src="@Url.Content("~/Content/no-photo.jpg")" height="100" />
+                }
 
+            </dd>
         </dl>
         
     </div>

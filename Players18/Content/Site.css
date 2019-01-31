@@ -27,6 +27,16 @@
     white-space: normal;
 }
 
+.dl-horizontal dd {
+    font-size: 1.2em;
+    white-space: normal;
+}
+
+.dl-horizontal img {
+    margin: 10px;
+    width: 150px;
+    height: 200px;
+}
 
 input,
 select,
@@ -97,6 +107,7 @@ table {
 }
 
 .playerImg {
+
     border-color: white;
     border: 3px solid;
 }
